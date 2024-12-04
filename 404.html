@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="refresh" content="0; url=./" />
-</head>
-<body>
-  Redirecting...
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+      // Extract the path after /angular-page/
+      var path = window.location.pathname.replace('/angular-page', '');
+      
+      // Redirect to index.html with the correct path as a query parameter
+      window.location.replace('/angular-page/?redirect=' + encodeURIComponent(path));
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
 </html>
