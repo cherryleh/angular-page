@@ -3,7 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent }, // Adjust if you have a home component
-  { path: 'about', component: AboutComponent },
-  { path: '**', redirectTo: '/home' } // Wildcard route for a 404 page
+  { path: '', component: HomeComponent }, // Root route displays Home
+  { path: 'about', component: AboutComponent }, // About route
+  { path: '**', redirectTo: '' } // Wildcard route redirects to Home
 ];
