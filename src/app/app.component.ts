@@ -1,22 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, RouterModule, NavigationEnd, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <router-outlet></router-outlet>
+  `,
+  standalone: true,
+  imports: [RouterModule, RouterOutlet],
 })
-export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
-
-  ngOnInit() {
-    // Check if there's a redirect query parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const redirectPath = urlParams.get('redirect');
-    
-    if (redirectPath) {
-      // Navigate to the preserved route
-      this.router.navigateByUrl(redirectPath);
-    }
+export class AppComponent {
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        console.log('Current route:', event.url);
+      }
+    });
   }
 }
