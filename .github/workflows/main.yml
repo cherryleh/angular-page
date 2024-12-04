@@ -21,11 +21,11 @@ jobs:
         run: npm install
 
       - name: Build the Angular app
-        run: npm run build -- --output-path=dist --base-href="/angular-page/"
+        run: npm run build -- --output-path=dist/angular-page --base-href="/angular-page/"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: /dist/angular-page
-          branch: gh-pages  
-          token: ${{ secrets.GH_TOKEN }}
+          folder: dist/angular-page  # Corrected the folder path
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use default GITHUB_TOKEN unless using custom
