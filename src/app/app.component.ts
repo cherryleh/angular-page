@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, NavigationEnd, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
     <router-outlet></router-outlet>
   `,
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterModule, RouterOutlet],
 })
 export class AppComponent {
   constructor(private router: Router) {
