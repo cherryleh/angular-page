@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build the Angular app
-        run: npm run build -- --output-path=dist/angular-page --base-href="/angular-page/"
+        run: npm run build -- --output-path=dist/angular-page --base-href="https://cherryleh.github.io/angular-page/"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
