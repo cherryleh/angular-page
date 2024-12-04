@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <script>
-      // Extract the path after the base URL
-      var path = window.location.pathname.replace('/angular-page', '');
-      if (!path.startsWith('/')) {
-        path = '/' + path;
-      }
-
-      // Redirect to the Angular app's index.html with the route as a hash
-      var newUrl = '/angular-page/#' + path;
-      window.location.replace(newUrl);
-    </script>
-  </head>
-  <body>
-    Redirecting...
-  </body>
+<!doctype html>
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="utf-8">
+  <title>AngularPage</title>
+  <base href="https://cherryleh.github.io/angular-pages">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles-5INURTSO.css"></head>
+<body>
+  <app-root></app-root>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-ATFQCIHI.js" type="module"></script></body>
 </html>
