@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-page/browser",
+            "outputPath": "dist/angular-page/",
             "baseHref": "https://cherryleh.github.io/angular-page/",
             "index": "src/index.html",
             "browser": "src/main.ts",
